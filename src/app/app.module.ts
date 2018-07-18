@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './home/header/header.component';
 import { SectionComponent } from './home/section/section.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { TestComponent } from './test/test.component';
 
 
 const appRoutes: Routes = [
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     ContactComponent,
     HeaderComponent,
     SectionComponent,
-    FooterComponent
+    FooterComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
