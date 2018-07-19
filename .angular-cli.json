@@ -20,7 +20,13 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "styles.css"
+        "styles.css",
+        "assets/css/bootstrap.min.css",
+        "assets/vendors/animate/animate.css",
+        "assets/vendors/font-awesome/css/font-awesome.min.css",
+        "assets/vendors/camera-slider/camera.css",        
+        "assets/css/style.css"
+       
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

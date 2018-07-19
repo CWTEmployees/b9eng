@@ -9,10 +9,17 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ServicesComponent } from './services/services.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
-import { HeaderComponent } from './home/header/header.component';
-import { SectionComponent } from './home/section/section.component';
-import { FooterComponent } from './home/footer/footer.component';
-import { TestComponent } from './test/test.component';
+import { AboutHeaderComponent } from './about-us/about-header/about-header.component';
+import { AboutSectionComponent } from './about-us/about-section/about-section.component';
+import { ContactSectionComponent } from './contact/contact-section/contact-section.component';
+import { ServiceSectionComponent } from './services/service-section/service-section.component';
+import { HomeSectionComponent } from './home/home-section/home-section.component';
+
+
+
+
+
+
 
 
 const appRoutes: Routes = [
@@ -32,10 +39,16 @@ const appRoutes: Routes = [
     ServicesComponent,
     ProductComponent,
     ContactComponent,
-    HeaderComponent,
-    SectionComponent,
-    FooterComponent,
-    TestComponent
+    AboutHeaderComponent,
+    AboutSectionComponent,
+    ContactSectionComponent,
+    ServiceSectionComponent,
+    HomeSectionComponent,
+    
+
+ 
+
+    
   ],
   imports: [
     BrowserModule,
