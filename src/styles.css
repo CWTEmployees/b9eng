@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+#grid[_ngcontent-c3] {
+    display: grid;
+    height: 150;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: 300px;
+    grid-column-gap: 20px;
+  }
+  .overlay-left[_ngcontent-c3] {
+    position: absolute;
+    display: inline-block;
+    display: grid;
+    width: 7rem;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    bottom: 0;
+    background-color: #Fff !important;
+    z-index: 1;
+    cursor: pointer;
+}
+.overlay-right[_ngcontent-c3] {
+    position: absolute;
+    display: inline-block;
+    display: grid;
+    width: 7rem;
+    height: 100%;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    background-color: #Fff !important;
+    z-index: 1;
+    cursor: pointer;
+}
+#slider-buttons-left[_ngcontent-c3] {
+    position: absolute;
+    z-index: 1000;
+    top: 130px;
+    float: left;
+    cursor: pointer;
+    font-size: 250%;
+    color: #778899;
+    left: 25px !important;
+}
+#slider-buttons-right[_ngcontent-c3] {
+    position: absolute;
+    top: 130px;
+    z-index: 1000;
+    float: right;
+    cursor: pointer;
+    font-size: 250%;
+    color: #778899;
+    right: 25px !important;
+}

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+import { CustomFormsModule } from 'ngx-custom-validators';
+
 
 @Component({
   selector: 'app-contact-section',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactSectionComponent implements OnInit {
 
-  constructor() { }
+  
+
+
 
   ngOnInit() {
+  }
+
+  saveContactForm(contactDetails: NgForm ): void
+  {
+    console.log(contactDetails.value);
   }
 
 }

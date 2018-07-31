@@ -9,7 +9,18 @@ export class ProductComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  public imagesUrl;
+  ngOnInit() 
+  {
+   
+    this.imagesUrl = [
+      'assets/images/slides/coverall.jpg',
+      'assets/images/slides/toolbag.jpg',
+      'assets/images/slides/lanyards.jpg',
+      'assets/images/slides/rope.png',
+      'assets/images/slides/shoes.gif',
+      'assets/images/slides/jacket.gif',
+      'assets/images/slides/fls.png',
+      ];
+}
 }

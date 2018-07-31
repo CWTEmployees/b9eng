@@ -1,0 +1,34 @@
+.container-fluid
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+.banner_text
+{
+  position: absolute;
+  top: 20%;
+  text-align: center;
+
+}
+.banner_h5
+{
+  color: #F6B60B;
+  font-size: 25px;
+
+}
+.banner_h3
+{
+  color: #fff;
+  font-size: 30px;
+  padding-top: 50px;
+  font-family: 400 30px "Roboto", sans-serif;
+}
+.banner_p
+{
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+
+

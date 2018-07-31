@@ -2,9 +2,9 @@
 <section class="top_header_area">
     <div class="container">
         <ul class="nav navbar-nav top_nav">
-            <li><a href="#"><i class="fa fa-phone"></i>+1 (168) 314 5016</a></li>
-            <li><a href="#"><i class="fa fa-envelope-o"></i>info@thethemspro.com</a></li>
-            <li><a href="#"><i class="fa fa-clock-o"></i>Mon - Sat 12:00 - 20:00</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>+91 9704157672</a></li>
+            <li><a href="#"><i class="fa fa-envelope-o"></i>b9engineers@gmail.com</a></li>
+            <li><a href="#"><i class="fa fa-clock-o"></i>Mon - Sat 09:00 - 20:00</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right social_nav">
             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -22,16 +22,7 @@
 	<!-- Header_Area -->
     <nav class="navbar navbar-default header_aera" id="main_navbar">
         <div class="container">
-            <!-- searchForm -->
-            <div class="searchForm">
-                <form action="#" class="row m0">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="search" name="search" class="form-control" placeholder="Type & Hit Enter">
-                        <span class="input-group-addon form_hide"><i class="fa fa-times"></i></span>
-                    </div>
-                </form>
-            </div><!-- End searchForm -->
+      
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="col-md-2 p0">
                 <div class="navbar-header">
@@ -51,7 +42,14 @@
                     <ul class="nav navbar-nav navbar-right">
                        <li><a routerLink="home">Home</a></li>
                         <li><a routerLink="about-us">About</a></li>
-                        <li><a routerLink="services">Services</a></li>
+                        <!-- <li><a routerLink="services">Services</a></li> -->
+                        <li class="dropdown submenu">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Services</a>
+                            <ul class="dropdown-menu other_dropdwn">
+                                <li><a routerLink="floorcoating">Floor Coating</a></li>
+                                <li><a routerLink="fls">Fixed Line System</a></li>
+                            </ul>
+                        </li>
                         <li><a routerLink="product">Product</a></li>
                         <li><a routerLink="contact">Contact</a></li>
                         <!-- <li><a href="#" class="nav_searchFrom"><i class="fa fa-search"></i></a></li> -->
@@ -66,8 +64,13 @@
   <router-outlet></router-outlet>
 </div>
 
- <!-- Footer Area -->
- <footer class="footer_area">
+
+
+
+
+
+  <!-- Footer Area -->
+  <footer class="footer_area">
     <div class="container">
         <div class="footer_row row">
             <div class="col-md-3 col-sm-6 footer_about">
@@ -84,34 +87,47 @@
             <div class="col-md-3 col-sm-6 footer_about quick">
                 <h2>Quick links</h2>
                 <ul class="quick_link">
-                    <li><a href="#"><i class="fa fa-chevron-right"></i>Building Construction</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i>Home Renovation</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i>Hardwood Flooring</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i>Repairing Of Roof</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i>Commercial Construction</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i>Concreate Transport</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>About</a></li> 
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Floor Coating Services</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Fixed Line System (FLS)</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Contact Us</a></li>
                 </ul>
+
             </div>
             <div class="col-md-3 col-sm-6 footer_about">
-                <h2>Twitter Feed</h2>
-                <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
-                <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                <h2>Our Products</h2>
+
+                 <ul class="quick_link">
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Safety</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Welding</a></li>    
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Adhesives / Coatings</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Hand Tools / Technical Chemicals</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Spraying and Dispensing System</a></li>
+                    
+                </ul>
+                <br>
+                <a href="#" class="btn btn-default" style="background: #F6B60B; color: #FFF; border: none;">Click Here to Products</a>
+
+               <!--  <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a> -->
             </div>
             <div class="col-md-3 col-sm-6 footer_about">
                 <h2>CONTACT US</h2>
                 <address>
                     <p>Have questions, comments or just want to say hello:</p>
                     <ul class="my_address">
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@thethemspro.com</a></li>
-                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+880 123 456 789</a></li>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Sector # 10, Road # 05, Plot # 31, Uttara, Dhaka 1230 </span></a></li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>b9engineers@gmail.com</a></li>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+91 9704157672</a></li>
+                        <li><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i>040 23775996</a></li>
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>B9 ENGINEERS, Door #: 10-1-35/C, FATEH NAGAR, HYDERABAD - 500 018, Telangana, India. </span></a></li>
                     </ul>
                 </address>
             </div>
         </div>
     </div>
     <div class="copyright_area">
-        CCopyright 2018 All rights reserved. Designed by <a href="https://charanwebtechnologies.com/">charanwebtechnologies.</a>
+        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2018 <b>B9 ENGINEERS</b> All rights reserved. Designed by <a href="https://charanwebtechnologies.com/">Charan Web Technologies.</a>
     </div>
 </footer>
 <!-- End Footer Area -->
+

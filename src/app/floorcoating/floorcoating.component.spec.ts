@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServiceSectionComponent } from './service-section.component';
+import { FloorcoatingComponent } from './floorcoating.component';
 
-describe('ServiceSectionComponent', () => {
-  let component: ServiceSectionComponent;
-  let fixture: ComponentFixture<ServiceSectionComponent>;
+describe('FloorcoatingComponent', () => {
+  let component: FloorcoatingComponent;
+  let fixture: ComponentFixture<FloorcoatingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ServiceSectionComponent ]
+      declarations: [ FloorcoatingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ServiceSectionComponent);
+    fixture = TestBed.createComponent(FloorcoatingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

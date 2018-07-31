@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UmarComponent } from './umar.component';
+import { FlsComponent } from './fls.component';
 
-describe('UmarComponent', () => {
-  let component: UmarComponent;
-  let fixture: ComponentFixture<UmarComponent>;
+describe('FlsComponent', () => {
+  let component: FlsComponent;
+  let fixture: ComponentFixture<FlsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UmarComponent ]
+      declarations: [ FlsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UmarComponent);
+    fixture = TestBed.createComponent(FlsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

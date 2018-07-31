@@ -10,7 +10,7 @@
 
 <!-- Map -->
 <div class="contact_map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.7593161112327!2d78.38953031440326!3d17.518999103608227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8e03b13c43a1%3A0x5cc8c848c91adecf!2sCharan+Web+Technologies!5e0!3m2!1sen!2sin!4v1531910514034" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.0191888452073!2d78.45268877177757!3d17.45787714945486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9093213e3451%3A0xaec886391345e35e!2s10-1-76%2C+Fatehnagar%2C+Begumpet%2C+Hyderabad%2C+Telangana+500018!5e0!3m2!1sen!2sin!4v1532695214391" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 <!-- End Map -->
 
@@ -21,35 +21,137 @@
           <div class="col-sm-6 contact_info">
               <h2>Contact Info</h2>
               <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+              
               <div class="location">
                   <div class="location_laft">
                       <a class="f_location" href="#">location</a>
                       <a href="#">phone</a>
-                      <a href="#">fax</a>
                       <a href="#">email</a>
+                      <a href="#">Customer Care</a>
                   </div>
                   <div class="address">
-                      <a href="#">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx </a>
-                      <a href="#">+91 xxxxx xxxxx</a>
-                      <a href="#">xxxxxxxxxxxxxx</a>
-                      <a href="#">xxxxxxxxxxxxxxxxxx</a>
+                      <a href="#">B9 ENGINEERS, Door #: 10-1-35/C, FATEH NAGAR, HYDERABAD - 500 018  TS</a>
+                      <a href="#">+91 9704157672</a>
+                      <a href="#">b9engineers@gmail.com</a>
+                      <a href="#">040 23775996</a>
                   </div>
               </div>
           </div>
           <div class="col-sm-6 contact_info send_message">
               <h2>Send Us a Message</h2>
-              <form class="form-inline contact_box">
-                  <input type="text" class="form-control input_box" placeholder="First Name *">
-                  <input type="text" class="form-control input_box" placeholder="Last Name *">
-                  <input type="text" class="form-control input_box" placeholder="Your Email *">
-                  <input type="text" class="form-control input_box" placeholder="Subject">
-                  <input type="text" class="form-control input_box" placeholder="Your Website">
-                  <textarea class="form-control input_box" placeholder="Message"></textarea>
-                  <button type="submit" class="btn btn-default">Send Message</button>
-              </form>
+              <br>
+              <form class="formvalidations"  #contactForm="ngForm" (ngSubmit)="saveContactForm(contactForm)">
+                    <div class="form-group col-sm-12 col-md-12" [class.has-error]="fullNameControl.invalid && fullNameControl.touched" 
+                    [class.has-success]="fullNameControl.valid">
+                    <label for="fullName" class="control-label">Full Name</label>
+                      <input type="text" id="fullName" required class="form-control" placeholder="Name *" 
+                      name="fullName" [(ngModel)]="fullName" #fullNameControl="ngModel">
+                      <span class="help-block" *ngIf="fullNameControl.invalid && fullNameControl.touched">Name is Required</span>
+                    </div>
+    
+    
+                    <div class="form-group col-sm-12 col-md-12" [class.has-error]="emailControl.invalid && emailControl.touched" 
+                    [class.has-success]="emailControl.valid">
+                    <label for="email" class="control-label">Email</label>
+                      <input type="email" id="email" required [email]="email!==''" class="form-control" placeholder="Email *" 
+                      name="email" [(ngModel)]="email" #emailControl="ngModel">
+    
+                      <span class="help-block" *ngIf="emailControl.errors?.required && emailControl.touched">
+                        Email is required
+                      </span>
+                      <span class="help-block" *ngIf="emailControl.errors?.email && emailControl.touched">
+                        Email is Invalid
+                      </span>
+                    </div>
+    
+                    <!-- <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" [rangeLength]="[5, 9]">
+    <p *ngIf="field.errors?.rangeLength">error message</p> -->
+                    <div class="form-group col-sm-12 col-md-12" [class.has-error]="number.invalid && number.touched" 
+                    [class.has-success]="number.valid">
+                    <label for="mobile" class="control-label">Mobile Number</label>
+                      <input type="text" id="mobile" required class="form-control" placeholder="Mobile *" 
+                      name="mobile" [(ngModel)]="mobile" #number="ngModel">
+                      <span class="help-block" *ngIf="number.invalid && number.touched">Mobile number Required</span>
+                    </div>
+    
+    
+                    <!-- <div class="form-group col-sm-12 col-md-12" [class.has-error]="field.invalid && field.touched" 
+                    [class.has-success]="field.valid">  
+                    <input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [gte]="10">
+                    <span class="help-block" *ngIf="field.errors?.gte">error message</span>
+                </div> -->
+    
+    
+                    <!-- <div class="form-group" [class.has-error]="email.invalid && email.touched">
+                        <label for="email" class="control-label">Email</label>
+                        <input id="email" required [email]="email!==''" type="text" class="form-control" name="email"
+                                [(ngModel)]="email" #email="ngModel">
+                        <span class="help-block" *ngIf="email.errors?.required && email.touched">
+                          Email is required
+                        </span>
+                        <span class="help-block" *ngIf="email.errors?.email && email.touched">
+                          Email is Invalid
+                        </span>
+                      </div> -->
+                      <div class="form-group col-sm-12 col-md-12">
+                            <label for="subject" class="control-label">Subject</label>
+                        <input type="text" class="form-control" placeholder="Subject" name="subject" [(ngModel)]="subject">
+                    </div>
+                    
+                    <div class="form-group col-sm-12 col-md-12" [class.has-error]="messageControl.invalid && messageControl.touched" 
+                    [class.has-success]="messageControl.valid">
+                            <label for="message" class="control-label">Message</label>
+                        <textarea class="form-control" id="message" required placeholder="Your Message *"  name="message" 
+                        [(ngModel)]="message" #messageControl="ngModel"></textarea>
+    
+                        <span class="help-block" *ngIf="messageControl.invalid && messageControl.touched">Message is Required</span>
+                    </div>
+    
+    
+                    <div class="form-group col-sm-12 col-md-12">
+                            <button type="submit" class="btn btn-default" [disabled]="contactForm.invalid">Send Message</button>
+                    </div>
+                </form>
+             
           </div>
       </div>
   </div>
 </section>
 <!-- End All contact Info -->
+
+<div class="col-md-6 contact_info send_message">
+        <form class="form-inline contact_box">
+
+         
+
+                <div class="form-group col-sm-12 col-md-12">
+                        <input type="text" class="form-control input_box" placeholder="Name *" name="name" [(ngModel)]="mobile">
+                    </div>
+            
+                <div class="form-group col-sm-12 col-md-12">
+                        <input type="text" class="form-control input_box" placeholder="Email *" name="email" [(ngModel)]="email">
+                    </div>
+
+             <div class="form-group col-sm-12 col-md-12">
+                 <input type="text" class="form-control input_box" placeholder="Mobile Number *" name="mobile" [(ngModel)]="mobile">
+             </div>
+
+             <div class="form-group col-sm-12 col-md-12">
+                 <input type="text" class="form-control input_box" placeholder="Subject" name="subject" [(ngModel)]="subject">
+             </div>
+             
+             <div class="form-group col-sm-12 col-md-12">
+                 <textarea class="form-control input_box" placeholder="Your Message *"  name="message" [(ngModel)]="message"></textarea>
+             </div>
+             <!-- <input type="text" class="form-control" placeholder="First Name *" pattern="[A-Za-z ‘-]{1,15}"  required="true">
+             <input type="text" class="form-control" placeholder="Mobile *" pattern="[6789][0-9]{9}"  required="true">
+             <input type="email" class="form-control" placeholder="Your Email *" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  required="true">
+             <input type="text" class="form-control" placeholder="Subject">
+             <input type="text" class="form-control" placeholder="Your Website">
+             <textarea class="form-control" placeholder="Message" pattern="[A-Za-z ‘-]{1,50}"  required="true"></textarea> -->
+             <div class="form-group col-sm-12 col-md-12">
+                 <button type="submit" class="btn btn-default">Send Message</button>
+             </div>    
+           </form>
+</div>
+
